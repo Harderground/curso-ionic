@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Feriados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-list>
+          <ion-item *ngFor="let feriado of feriadosFormat">
+            <p style="color:red;" *ngIf="feriado.date.substring(3,5) < mes" >Dia:{{feriado.date}} ya paso :(</p>
+            <p style="color:green;" *ngIf="feriado.date.substring(3,5) >= mes">Dia:{{feriado.date}}</p>
+            <p>Motivo:{{feriado.title}}</p>
+          </ion-item>
+        </ion-list>
+  </ion-list>
+</ion-content>

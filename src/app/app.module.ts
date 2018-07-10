@@ -10,12 +10,15 @@ import { RutPage } from '../pages/rut/rut';
 
 import { RutServicioProvider } from '../providers/rut-servicio/rut-servicio';
 import { HttpClientModule } from '@angular/common/http';
+import { FeriadosServicioProvider } from '../providers/feriados-servicio/feriados-servicio';
+import { FeriadosPage } from '../pages/feriados/feriados';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RutPage
+    RutPage,
+    FeriadosPage
   ],
   imports: [
     BrowserModule,
@@ -26,13 +29,15 @@ import { HttpClientModule } from '@angular/common/http';
   entryComponents: [
     MyApp,
     HomePage,
-    RutPage
+    RutPage,
+    FeriadosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RutServicioProvider
+    RutServicioProvider,
+    FeriadosServicioProvider
     
   ]
 })

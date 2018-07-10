@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RutServicioProvider } from '../../providers/rut-servicio/rut-servicio';
+import { FeriadosPage } from '../feriados/feriados';
 
 
 
@@ -15,6 +16,7 @@ export class RutPage {
   public servel: any = {};
   public rut: any;
   public nombre: any;
+  public feriado:FeriadosPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, public _RutService: RutServicioProvider) {
     this.rut = "";
     this.nombre = "";
@@ -54,5 +56,8 @@ export class RutPage {
         console.log(error);
       }
     );
+  }
+  goFeriados(){
+    this.navCtrl.push(FeriadosPage);
   }
 }
