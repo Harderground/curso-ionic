@@ -48,7 +48,7 @@
           <ion-item *ngFor="let persona of personasNombres">
             <p>Nombre:{{persona.name}}</p>
             <p>Rut:{{persona.rut}}</p>
-            <button (click)="detallePersona(persona.rut)"> Ver</button>
+            <button (click)="detallePersona(persona.rut)"> Ver    <ion-icon name="ios-eye-outline"></ion-icon></button>
           </ion-item>
         </ion-list>
       </ion-col>
